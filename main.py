@@ -13,8 +13,7 @@ from selenium.webdriver.common.by import By
 GMAIL_USER = os.getenv("GMAIL_USER")
 GMAIL_PASSWORD = os.getenv("GMAIL_PASSWORD")
 
-# mail_recipients = ["cirtorosandiana64@gmail.com", "petreioana25@yahoo.com"]
-mail_recipients = ["cirtorosandiana64@gmail.com"]
+mail_recipients = ["cirtorosandiana64@gmail.com", "petreioana25@yahoo.com"]
 mail_subject = "Chirie noua pe Storia"
 
 latest_apartment_link = "..."
@@ -56,8 +55,8 @@ def start():
         else:
             print("Nothing new found", file=sys.stdout)
 
-        time.sleep(30)
         driver.refresh()
+        time.sleep(60)
 
 
 if __name__ == '__main__':
